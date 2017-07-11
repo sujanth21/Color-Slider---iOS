@@ -72,6 +72,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reset() {
+        
+        greySlider.value = 0.5
+        redSlider.value = 0.5
+        greenSlider.value = 0.5
+        blueSlider.value = 0.5
+        
+        greyLabel.text = "0.50"
+        redLabel.text = "0.50"
+        greenLabel.text = "0.50"
+        blueLabel.text = "0.50"
+        
+        view.backgroundColor = UIColor(white: 0.5, alpha: 1)
+        
+        let transition = CATransition()
+        transition.type = kCATransitionFade
+        transition.duration = 4
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        view.layer.add(transition, forKey: nil)
     }
 }
 
